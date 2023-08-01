@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:customerDatabase
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+    server:
+      error:
+        whitelabel:
+          enabled: false
+
+          spring:
+            thymeleaf:
+              enabled: true
+              prefix: classpath:/templates/ # Location of Thymeleaf templates
+              suffix: .html # Suffix for Thymeleaf template files
+              mode: HTML # Template mode, can be HTML, XML, TEXT, etc. (default is HTML)
+              cache: false # Disable template caching for development (enable for production)
+              encoding: UTF-8 # Template file encoding
+              check-template: true # Check the existence of templates during template resolution
+              check-template-location: true # Check the existence of template directories
+              servlet:
+                content-type: text/html
