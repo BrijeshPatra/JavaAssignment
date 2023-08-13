@@ -28,21 +28,21 @@ Customer Management System is a Java Spring Boot application that provides RESTf
     "username": "your_username",
     "password": "your_password"
   }
-Response:
+### Response:
 Success: Status code: 200, 
 Response body: Bearer token
 Failure: Status code: 401, Unauthorized
 
-2. Create a New Customer
+### 2. Create a New Customer
 Path: /api/customers
 
-Method: POST
+### Method: POST
 
 Request Header: Authorization: Bearer
 
  <your_bearer_token>
 
-Request Body:
+### Request Body:
 {
   "first_name": "Jane",
   "last_name": "Doe",
@@ -54,22 +54,22 @@ Request Body:
   "phone": "1234567890"
 }
 
-Response:
+### Response:
 Success: Status code: 201, Response body: "Successfully Created"
 Failure: Status code: 400, Response body: "First Name or Last Name is missing"
 
-3. Get Customer List
+### 3. Get Customer List
 Path: /api/customers
 Method: GET
 Request Header: Authorization: Bearer <your_bearer_token>
 Response: Status code: 200, Response body: Array of customer objects
 
-4. Update Customer
+### 4. Update Customer
 Path: /api/customers/{uuid}
 Method: PUT
 Request Header: Authorization: Bearer <your_bearer_token>
 
-Request Body:
+### Request Body:
 
 {
   "first_name": "Updated First Name",
@@ -82,20 +82,20 @@ Request Body:
   "phone": "9876543210"
 }
 
-Response:
+### Response:
 Success: Status code: 200, Response body: "Successfully Updated"
 Failure: Status code: 500, Response body: "UUID not found"
 
-5. Delete Customer
+### 5. Delete Customer
 Path: /api/customers/{uuid}
 Method: DELETE
 Request Header: Authorization: Bearer <your_bearer_token>
 
-Response:
+### Response:
 Success: Status code: 200, Response body: "Successfully Deleted"
 Failure: Status code: 500, Response body: "Error Not Deleted"
 
-Getting Started
+### Getting Started
 1. Clone the repository: git clone https://github.com/your_username/your_repository.git
 
 2. Change directory to the project folder: cd your_repository
